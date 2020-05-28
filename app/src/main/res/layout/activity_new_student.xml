@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/ico_bck"
+    android:layoutDirection="rtl"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewStudentActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_margin="15dp"
+        android:background="@drawable/shape_student"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:fontFamily="@font/samim"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_new_name"
+            android:hint="نام"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_margin="15dp"
+        android:background="@drawable/shape_student"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:fontFamily="@font/samim"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_new_sh"
+            android:hint="شماره دانشجویی"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lin_new_course"
+        android:layout_margin="15dp"
+        android:background="@drawable/shape_student"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_margin="10dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@mipmap/ico_course"/>
+        <TextView
+            android:id="@+id/txt_new_course"
+            android:textSize="20dp"
+            android:fontFamily="@font/samim"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="انتخاب رشته تحصیلی"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/img_new_galery"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ico_gallery"/>
+        <ImageView
+            android:id="@+id/img_new_camera"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ico_camera"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_new_avatar"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ico_gallery"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_new_save"
+        android:text="ذخیره"/>
+
+</LinearLayout>

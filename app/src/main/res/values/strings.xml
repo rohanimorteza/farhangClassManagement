@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyStudent</string>
+    <string name="fill_name">لطفا نام را وارد کنید</string>
+    <string name="fill_number">لطفا شماره دانشجویی را وارد کنید</string>
+    <string name="fill_course">لطفا رشته را وارد کنید</string>
+    <string name="saved">ذخیره شد.</string>
+    <string name="not_found">یافت نشد.</string>
+    <string name="duplicate_number">قبلا ذخیره شده.</string>
+    <string name="title_activity_stdudent_list">StdudentListActivity</string>
+</resources>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@mipmap/ico_bck"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/crd_main_new"
+            android:layout_weight=".5"
+            android:layout_width="0dp"
+            app:cardElevation="5dp"
+            android:layout_margin="15dp"
+            app:cardCornerRadius="15dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@mipmap/ico_add_userr"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="افزودن دانشجو"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/samim"/>
+
+            </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/crd_main_search"
+            app:cardCornerRadius="15dp"
+            android:layout_weight=".5"
+            android:layout_width="0dp"
+            app:cardElevation="5dp"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@mipmap/search_icon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="جستجو"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/samim"/>
+
+            </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/crd_main_new_course"
+            android:layout_weight=".5"
+            android:layout_width="0dp"
+            app:cardElevation="5dp"
+            android:layout_margin="15dp"
+            app:cardCornerRadius="15dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@mipmap/ico_course"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="مدیریت رشته ها"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/samim"/>
+
+            </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/crd_main_list_student"
+            android:layout_weight=".5"
+            android:layout_width="0dp"
+            app:cardElevation="5dp"
+            android:layout_margin="15dp"
+            app:cardCornerRadius="15dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@mipmap/ico_course"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="نمایش همه دانشجویان"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/samim"/>
+
+            </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+<!--
+        <androidx.cardview.widget.CardView
+            android:id="@+id/crd_main_search"
+            app:cardCornerRadius="15dp"
+            android:layout_weight=".5"
+            android:layout_width="0dp"
+            app:cardElevation="5dp"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@mipmap/search_icon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="جستجو"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/samim"/>
+
+            </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+-->
+
+    </LinearLayout>
+<!--
+    <Button
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ثبت دانشجوی جدید"
+        android:id="@+id/btn_main_new"/>
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="جستجو"
+        android:id="@+id/btn_main_search"/>
+-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rec"/>
+
+
+
+</LinearLayout>

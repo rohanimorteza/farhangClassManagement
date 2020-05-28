@@ -6,5 +6,6 @@
     <string name="saved">ذخیره شد.</string>
     <string name="not_found">یافت نشد.</string>
     <string name="duplicate_number">قبلا ذخیره شده.</string>
+    <string name="departman_select">انتخاب دپارتمان</string>
     <string name="title_activity_stdudent_list">StdudentListActivity</string>
 </resources>

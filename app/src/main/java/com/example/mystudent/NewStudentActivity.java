@@ -50,6 +50,8 @@ public class NewStudentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_new_student);
 
 
+        MainActivity.DEP_POS = "2";
+
         setTitle("دانشجوی جدید");
         name = findViewById(R.id.edt_new_name);
         number = findViewById(R.id.edt_new_sh);
@@ -155,7 +157,7 @@ public class NewStudentActivity extends AppCompatActivity {
     private void CourseSelect() {
         View alertView = LayoutInflater.from(NewStudentActivity.this).inflate(R.layout.alert_search,null);
         AlertDialog.Builder alert = new AlertDialog.Builder(NewStudentActivity.this);
-        alert.setTitle("انتخاب رشته تحصیلی");
+        alert.setTitle("انتخاب دپارتمان ");
         alert.setView(alertView);
 
         refreshCourse(alertView);

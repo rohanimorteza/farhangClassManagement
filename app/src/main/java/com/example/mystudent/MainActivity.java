@@ -21,10 +21,13 @@ import android.widget.Toast;
 import com.example.mystudent.Adapter.StudentAdapter;
 import com.example.mystudent.Model.Student;
 
+import static android.os.Build.VERSION.SDK_INT;
+
 public class MainActivity extends AppCompatActivity {
 
     //Button insert,search;
-    CardView insert,search,course,stdlist;
+    public static String DEP_POS="0";
+    CardView insert,search,course,stdlist,departmant;
     RecyclerView recyclerView;
     Dialog dialog;
 
@@ -36,12 +39,17 @@ public class MainActivity extends AppCompatActivity {
         insert = findViewById(R.id.crd_main_new);
         search = findViewById(R.id.crd_main_search);
         course = findViewById(R.id.crd_main_new_course);
+        departmant = findViewById(R.id.crd_main_new_departmant);
         stdlist = findViewById(R.id.crd_main_list_student);
 
         recyclerView = findViewById(R.id.rec);
 
         showStudents();
-
+        DEP_POS = "0";
+        setTitle("");
+        if (SDK_INT >17){
+            getWindow().peekDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+        }
 
 
         insert.setOnClickListener(new View.OnClickListener() {
@@ -50,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,NewStudentActivity.class));
             }
         });
-        course.setOnClickListener(new View.OnClickListener() {
+        departmant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this,CourseActivity.class));

@@ -17,6 +17,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/img_list_pic"
+            android:padding="5dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/vila"/>
+
         <LinearLayout
             android:layout_weight=".7"
             android:layout_width="0dp"
@@ -44,13 +52,6 @@
 
         </LinearLayout>
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/img_list_pic"
-            android:padding="5dp"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@mipmap/vila"/>
 
     </LinearLayout>
 

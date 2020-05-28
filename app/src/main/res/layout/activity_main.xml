@@ -87,7 +87,7 @@
         android:orientation="horizontal">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/crd_main_new_course"
+            android:id="@+id/crd_main_new_departmant"
             android:layout_weight=".5"
             android:layout_width="0dp"
             app:cardElevation="5dp"
@@ -109,7 +109,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="مدیریت رشته ها"
+                    android:text="مدیریت دپارتمان"
                     android:textStyle="bold"
                     android:fontFamily="@font/samim"/>
 
@@ -184,6 +184,111 @@
 
         </androidx.cardview.widget.CardView>
 -->
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/crd_main_new_register"
+            android:layout_weight=".5"
+            android:layout_width="0dp"
+            app:cardElevation="5dp"
+            android:layout_margin="15dp"
+            app:cardCornerRadius="15dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@mipmap/ico_course"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ثبت نام"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/samim"/>
+
+            </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/crd_main_new_course"
+            android:layout_weight=".5"
+            android:layout_width="0dp"
+            app:cardElevation="5dp"
+            android:layout_margin="15dp"
+            app:cardCornerRadius="15dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@mipmap/ico_course"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ایجاد دوره جدید"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/samim"/>
+
+            </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+        <!--
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crd_main_search"
+                    app:cardCornerRadius="15dp"
+                    android:layout_weight=".5"
+                    android:layout_width="0dp"
+                    app:cardElevation="5dp"
+                    android:layout_margin="15dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@mipmap/search_icon"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="جستجو"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/samim"/>
+
+                    </LinearLayout>
+
+
+
+                </androidx.cardview.widget.CardView>
+        -->
 
     </LinearLayout>
 <!--

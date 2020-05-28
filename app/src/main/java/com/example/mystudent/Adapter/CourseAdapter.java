@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.mystudent.MainActivity;
 import com.example.mystudent.Model.Course;
 import com.example.mystudent.NewStudentActivity;
 import com.example.mystudent.R;
@@ -43,7 +44,13 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourceView
             @Override
             public void onClick(View v) {
 
-               ((NewStudentActivity)context).setCourse(courseList.get(position).getId(),courseList.get(position).getName());
+                if(MainActivity.DEP_POS.equals("2")){
+                    ((NewStudentActivity)context).setCourse(courseList.get(position).getId(),courseList.get(position).getName());
+                }else if(MainActivity.DEP_POS.equals("1")){
+
+                }
+
+
 
             }
         });

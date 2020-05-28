@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.mystudent.Adapter.CourseAdapter;
+
 import com.example.mystudent.Adapter.StudentAdapter;
 
 import java.io.ByteArrayOutputStream;
@@ -29,8 +30,9 @@ public class CourseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course);
-        setTitle("مدیریت رشته ها");
+        setTitle("مدیریت دپارتمان");
 
+        MainActivity.DEP_POS = "1";
 
         recyclerView = findViewById(R.id.rec_course);
         add = findViewById(R.id.btn_crs_add);

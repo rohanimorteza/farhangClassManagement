@@ -15,6 +15,8 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.view.View;
 
+import static android.os.Build.VERSION.SDK_INT;
+
 public class StdudentListActivity extends AppCompatActivity {
 
     @Override
@@ -24,6 +26,9 @@ public class StdudentListActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        if (SDK_INT >17){
+            getWindow().peekDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+        }
         setTitle("");
         init();
 

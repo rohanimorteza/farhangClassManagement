@@ -228,7 +228,11 @@ public class dbHandler extends SQLiteOpenHelper {
         cursor.moveToFirst();
         return cursor.getCount();
     }
-
+    public int getItemListCount(String id){
+        Cursor cursor = db.rawQuery("select id, identifier , name , crs_name , ax ,reshte from tbl_student JOIN tbl_crs on tbl_crs.id_crs=tbl_student.reshte where reshte ="+id,null);
+        cursor.moveToFirst();
+        return cursor.getCount();
+    }
 
     public boolean isGet(String name){
         Cursor cursor = db.rawQuery("select name from tbl_student where name like '%"+name+"%'",null);

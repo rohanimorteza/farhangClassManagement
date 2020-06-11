@@ -40,7 +40,7 @@ public class ListFragment extends Fragment {
         dbh.open();
 
         for (int i=1;i<=dbh.getCrsCount();i++){
-            if(getArguments().get("FRG").equals(""+i)){
+            if(getArguments().get("FRG").equals(""+i) && dbh.getItemListCount(""+i)>0){
                 items=dbh.display2(""+i);
             }
         }
@@ -53,12 +53,18 @@ public class ListFragment extends Fragment {
             items=dbh.display2("2");
         }
         */
-
         dbh.close();
 
-        StudentAdapter studentAdapter = new StudentAdapter(getContext(),items);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(studentAdapter);
+        if(items!=null){
+            StudentAdapter studentAdapter = new StudentAdapter(getContext(),items);
+            recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+            recyclerView.setAdapter(studentAdapter);
+
+        }else {
+            recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+            recyclerView.setAdapter(null);
+        }
+
 
 
     }

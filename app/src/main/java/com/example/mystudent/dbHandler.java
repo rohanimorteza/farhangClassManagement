@@ -218,6 +218,12 @@ public class dbHandler extends SQLiteOpenHelper {
         cursor.moveToFirst();
         return cursor.getCount();
     }
+
+    public void del(String number){
+         db.execSQL("DELETE from tbl_student where identifier='"+number+"'");
+    }
+
+
     public String getCrsTitle(String id){
         Cursor cursor = db.rawQuery("select crs_name from tbl_crs where id_crs='"+id+"'",null);
         cursor.moveToFirst();

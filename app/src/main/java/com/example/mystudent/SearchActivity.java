@@ -90,6 +90,18 @@ public class SearchActivity extends AppCompatActivity {
 
         });
 
+        logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle b = getIntent().getExtras();
+                 dbh.open();
+                 dbh.del(b.getString("NUM"));
+                 dbh.close();
+                Toast.makeText(getApplicationContext(),"حذف شد"+b.getString("NUM"),Toast.LENGTH_LONG).show();
+                finish();
+            }
+        });
+
     }
     private void showData(String num) {
 

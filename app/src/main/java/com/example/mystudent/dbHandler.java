@@ -86,14 +86,14 @@ public class dbHandler extends SQLiteOpenHelper {
     }
 
     public Student namayesh(String  number){
-        Cursor cursor = db.rawQuery("select * from tbl_student where identifier='"+number+"'",null);
+        Cursor cursor = db.rawQuery("select * from tbl_student inner join tbl_crs on id_crs=reshte where identifier='"+number+"' ",null);
         cursor.moveToFirst();
 
         Student student = new Student();
         student.setId(cursor.getString(0));
         student.setNumber(cursor.getString(1));
         student.setName(cursor.getString(2));
-        student.setCourse(cursor.getString(3));
+        student.setCourse(cursor.getString(6));
         student.setPhto(cursor.getBlob(4));
 
         return student;
@@ -221,6 +221,10 @@ public class dbHandler extends SQLiteOpenHelper {
 
     public void del(String number){
          db.execSQL("DELETE from tbl_student where identifier='"+number+"'");
+    }
+
+    public void edit(String number,String name,String course){
+         db.execSQL("UPDATE tbl_student set name='"+name+"' , reshte='"+course+"' where identifier='"+number+"'");
     }
 
 

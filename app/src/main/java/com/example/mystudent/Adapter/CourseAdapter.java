@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.mystudent.EditStudent;
 import com.example.mystudent.MainActivity;
 import com.example.mystudent.Model.Course;
 import com.example.mystudent.NewStudentActivity;
@@ -48,9 +49,9 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourceView
                     ((NewStudentActivity)context).setCourse(courseList.get(position).getId(),courseList.get(position).getName());
                 }else if(MainActivity.DEP_POS.equals("1")){
 
+                }else if(MainActivity.DEP_POS.equals("3")){
+                    ((EditStudent)context).setCourse(courseList.get(position).getId(),courseList.get(position).getName());
                 }
-
-
 
             }
         });

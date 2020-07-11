@@ -21,7 +21,7 @@ import com.example.mystudent.Model.Student;
 public class SearchActivity extends AppCompatActivity {
 
     EditText number;
-    CardView search;
+    CardView search,delete,edit;
     TextView name,course;
     dbHandler dbh;
     Student student;
@@ -37,6 +37,8 @@ public class SearchActivity extends AppCompatActivity {
 
         number = findViewById(R.id.edt_search_number);
         search = findViewById(R.id.crd_search_search);
+        delete = findViewById(R.id.crd_search_delete);
+        edit = findViewById(R.id.crd_search_edit);
         name = findViewById(R.id.txt_search_name);
         course = findViewById(R.id.txt_search_course);
         logo = findViewById(R.id.img_search_logo);
@@ -47,7 +49,7 @@ public class SearchActivity extends AppCompatActivity {
         Intent intent = getIntent();
         if (intent.hasExtra("NUM")) {
             Bundle b = getIntent().getExtras();
-            Toast.makeText(getApplicationContext(),""+b.getString("NUM"),Toast.LENGTH_LONG).show();
+            //Toast.makeText(getApplicationContext(),""+b.getString("NUM"),Toast.LENGTH_LONG).show();
             showData(b.getString("NUM"));
 
         } else {
@@ -90,17 +92,28 @@ public class SearchActivity extends AppCompatActivity {
 
         });
 
-        logo.setOnClickListener(new View.OnClickListener() {
+        delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Bundle b = getIntent().getExtras();
-                 dbh.open();
-                 dbh.del(b.getString("NUM"));
-                 dbh.close();
+                dbh.open();
+                dbh.del(b.getString("NUM"));
+                dbh.close();
                 Toast.makeText(getApplicationContext(),"حذف شد"+b.getString("NUM"),Toast.LENGTH_LONG).show();
                 finish();
             }
         });
+        edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle b = getIntent().getExtras();
+                Intent i = new Intent(SearchActivity.this,EditStudent.class);
+                i.putExtra("ID",b.getString("NUM"));
+                startActivity(i);
+            }
+        });
+
+
 
     }
     private void showData(String num) {
